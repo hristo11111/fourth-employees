@@ -1,8 +1,6 @@
-$light-gray: lightgray;
+@import '../styles/general.scss';
 
-.app-wrapper {
-    min-width: 360px;
-}
+$light-gray: lightgray;
 
 .employees {
     &--info-wrapper {
@@ -11,7 +9,7 @@ $light-gray: lightgray;
         margin: 0 auto;
         width: 650px;
 
-        @media (max-width: 650px) {
+        @media (max-width: $breakpoint-mobile) {
             flex-direction: column;
             width: 100%;
         }
@@ -21,7 +19,7 @@ $light-gray: lightgray;
         position: relative;
         margin: 0 auto;
 
-        @media (max-width: 650px) {
+        @media (max-width: $breakpoint-mobile) {
             width: 80%;
         }
     }
@@ -31,7 +29,6 @@ $light-gray: lightgray;
         outline: none;
         border: 1px solid $light-gray;
         width: 100%;
-        box-sizing: border-box;
     }
 
     &--suggestions {
@@ -39,7 +36,6 @@ $light-gray: lightgray;
         border-top: none;
         position: absolute;
         width: 100%;
-        box-sizing: border-box;
         background-color: #ebebef;
     }
 

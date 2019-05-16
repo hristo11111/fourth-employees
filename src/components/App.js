@@ -48,14 +48,12 @@ const App = (props) => {
     }
 
     return (
-        <div className='app-wrapper'>
-            <div className='employees--info-wrapper'>
-                <div className='employees--search-wrapper'>
-                    <input className='employees--search-input' placeholder='Employee names' type='text' value={text} onChange={(e) => onTextChanged(e.target.value)}/>
-                    {renderSuggestions()}
-                </div>
-                <EmployeesTable employees={props.employees.employeesFullData}/>
+        <div className='employees--info-wrapper'>
+            <div className='employees--search-wrapper'>
+                <input className='employees--search-input' placeholder='Employee names' type='text' value={text} onChange={(e) => onTextChanged(e.target.value)}/>
+                {renderSuggestions()}
             </div>
+            <EmployeesTable employees={props.employees.employeesFullData}/>
         </div>
     )
 }
